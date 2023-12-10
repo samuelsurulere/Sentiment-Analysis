@@ -38,7 +38,7 @@ The preferred model was the Random Forest Classifier. The hyperparameters of the
 
 ## Results
 - After extensive hyperparameter optimization, the Recall score for Logistic Regression was improved by $5\%$.
-- The optimized model was tested on two sample tweets to predict if they contained positive or negative sentiment. The model was later saved for deploying to the AWS cloud.
+- The optimized model was tested on two sample tweets to predict if they contained positive or negative sentiment. The model was later saved for deployment as a web app using Flask library.
 
 ### Key takeaways
 - I initally began to optimize the parameters for the Random Forest Classifier, as I chose it as the preferred model. But after some unsurmountable challenges, I instead went with the Logistic Regression. It took a bit of time (trying out different combinations of parameters) before I could get the presented results.
@@ -97,9 +97,8 @@ the Decision Tree Classifier actually accounts for almost all the negative senti
 ├── api_app.py           <-- Flask app used to deploy trained classification 
 |                              model
 │
-├── final_model.sav    <-- Saved model
-|
-├── vectorizer.sav     <-- Saved vectorizer
+├── outputs              <-- Contains the saved model file (final_model.sav)
+|                             and the saved vectorizer (vectorizer.sav)
 │
 ├── figures            <-- Contains figures used in the README.md file
 │
@@ -116,5 +115,11 @@ the Decision Tree Classifier actually accounts for almost all the negative senti
 * `Scikit-Learn` library for model evaluation and performance review
 * `Matplotlib`, `Seaborn`, `Plotly` libraries for visualizations
 * `Pickle` library for saving and loading pretrained model and vectorizer
+
+This is a little demonstration of the model's prediction through the Flask app
+
+<video width="640" height="300" controls>
+  <source src="figures/flask_demo.mov" type="video/mp4">
+</video>
 
 > This is my first NLP model which is a simple Twitter sentiment predictor. In the not too distant future, I aim to work on more complicated NLP projects. Please reach out to me if you have further ideas or suggestions to improve this project. I am also very much open to collaborating. **I am available through e-mail** drsamuelsurulere@gmail.com

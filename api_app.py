@@ -11,8 +11,8 @@ from nltk.corpus import stopwords
 app = Flask(__name__, template_folder='templates')
  
 # Loading vectorizer and pretrained ML model 
-cv = pickle.load(open('vectorizer.sav', 'rb'))
-model = pickle.load(open('final_model.sav', 'rb'))
+cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
+model = pickle.load(open('outputs/final_model.sav', 'rb'))
 
 ###################################################################
 # Preprocessing tweets to remove any special characters or numbers
