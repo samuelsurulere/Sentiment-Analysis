@@ -10,3 +10,4 @@ plotly>=5.9.0
 wordcloud==1.9.2
 Werkzeug<=3.0.1 
 Flask-Login==0.6.3
+Flask-WTF==1.2.1
