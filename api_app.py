@@ -5,7 +5,6 @@ import string
 import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
-from werkzeug.utils import url_quote
 
 
 # Create a Flask application
