@@ -9,3 +9,4 @@ seaborn>=0.12.2
 plotly>=5.9.0
 wordcloud==1.9.2
 Werkzeug==0.16.1
+Flask-WTF==1.2.0
