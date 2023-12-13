@@ -6,6 +6,7 @@ from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import nltk
 nltk.download('wordnet')
+nltk.download('stopwords')
 
 
 # Loading vectorizer and pretrained ML model 
