@@ -12,17 +12,7 @@ st.set_page_config(
     page_icon=":pencil:",
     layout="wide",
     initial_sidebar_state="expanded",
-)
-st.markdown(
-    """
-    <style>
-    body {
-        color: black !important;
-        background-color: white !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+    theme="classic",  # Use the classic theme to ensure black text on a white background
 )
 
 # st.markdown(
