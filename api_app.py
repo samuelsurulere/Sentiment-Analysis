@@ -5,14 +5,14 @@ import string
 import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
-from flask_socketio import SocketIO
+# from flask_socketio import SocketIO
 
 
 # Create a Flask application
 app = Flask(__name__, template_folder='templates')
  
 # Create a Socket.IO instance
-socketio = SocketIO(app)
+# socketio = SocketIO(app)
 
 # Loading vectorizer and pretrained ML model 
 cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
@@ -89,6 +89,6 @@ def predict():
 
 
 if __name__ == '__main__':
-    socketio.run(app)
-    #app.run(host='0.0.0.0', debug=True)
+    # socketio.run(app)
+    app.run(host='0.0.0.0', port=8080, debug=True)
  
