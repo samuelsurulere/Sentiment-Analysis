@@ -12,20 +12,20 @@ st.set_page_config(
     page_icon=":pencil:",
     layout="wide",
     initial_sidebar_state="expanded",
-    theme="classic",  # Use the classic theme to ensure black text on a white background
 )
 
-# st.markdown(
-#     """
-#     <style>
-#     .reportview-container {
-#         background: url("https://images.pexels.com/photos/2609107/pexels-photo-2609107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center fixed;
-#         background-size: cover;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+st.markdown(
+    """
+    <style>
+    body {
+        color: black !important;
+        background-color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Loading vectorizer and pretrained ML model 
 cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
