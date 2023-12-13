@@ -7,12 +7,13 @@ from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 from flask_socketio import SocketIO
 
-# Create a Socket.IO instance
-socketio = SocketIO(app)
 
 # Create a Flask application
 app = Flask(__name__, template_folder='templates')
  
+# Create a Socket.IO instance
+socketio = SocketIO(app)
+
 # Loading vectorizer and pretrained ML model 
 cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
 model = pickle.load(open('outputs/final_model.sav', 'rb'))
