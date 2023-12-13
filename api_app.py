@@ -11,8 +11,8 @@ import nltk
 st.markdown(
     """
     <style>
-    body {
-        background-image: url("https://images.pexels.com/photos/1297790/pexels-photo-1297790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    .reportview-container {
+        background: url("https://images.pexels.com/photos/2609107/pexels-photo-2609107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center fixed;
         background-size: cover;
     }
     </style>
