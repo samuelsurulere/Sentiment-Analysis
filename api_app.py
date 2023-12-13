@@ -5,20 +5,37 @@ import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import nltk
-# nltk.download('wordnet')
-# nltk.download('stopwords')
 
+# Set Streamlit theme to white background and black text
+st.set_page_config(
+    page_title="Tweet Sentiment Analysis",
+    page_icon=":pencil:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 st.markdown(
     """
     <style>
-    .reportview-container {
-        background: url("https://images.pexels.com/photos/2609107/pexels-photo-2609107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center fixed;
-        background-size: cover;
+    body {
+        color: black !important;
+        background-color: white !important;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# st.markdown(
+#     """
+#     <style>
+#     .reportview-container {
+#         background: url("https://images.pexels.com/photos/2609107/pexels-photo-2609107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center fixed;
+#         background-size: cover;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # Loading vectorizer and pretrained ML model 
 cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
