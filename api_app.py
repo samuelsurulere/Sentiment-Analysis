@@ -5,7 +5,7 @@ import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import nltk
-nltk.download('wordnet')
+# nltk.download('wordnet')
 # nltk.download('stopwords')
 
 st.markdown(
