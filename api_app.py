@@ -4,7 +4,8 @@ import string
 import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
-from nltk.corpus import wordnet
+import nltk
+nltk.download('wordnet')
 
 
 # Loading vectorizer and pretrained ML model 
