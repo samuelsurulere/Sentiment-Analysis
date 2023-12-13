@@ -5,6 +5,7 @@ import string
 import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
+import socketio
 # from werkzeug.utils import secure_filename, redirect
 
 # Create a Flask application
