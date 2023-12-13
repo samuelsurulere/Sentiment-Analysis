@@ -6,13 +6,13 @@ from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import nltk
 nltk.download('wordnet')
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 st.markdown(
     """
     <style>
     body {
-        background-image: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg");
+        background-image: url("https://images.pexels.com/photos/1297790/pexels-photo-1297790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
         background-size: cover;
     }
     </style>
