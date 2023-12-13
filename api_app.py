@@ -1,18 +1,10 @@
-# importing necessary libraries
-from flask import Flask, request, render_template
+import streamlit as st
 import pickle
 import string
 import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
-# from flask_socketio import SocketIO
 
-
-# Create a Flask application
-app = Flask(__name__, template_folder='templates')
- 
-# Create a Socket.IO instance
-# socketio = SocketIO(app)
 
 # Loading vectorizer and pretrained ML model 
 cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
@@ -61,34 +53,25 @@ def tweets_cleaner(tweet):
 ###################################################################
 
 
-# Create a home page
-@app.route('/')
-def home():
-    """
-    For displaying frontend HTML interface
-    """
-    return render_template('tweet_sentiment.html')
+# Streamlit app
+def main():
+    st.title('Tweet Sentiment Analysis')
 
-# Create a POST method
-@app.route('/predict', methods=['POST'])
-def predict():
-    """
-    For rendering results on HTML GUI
-    """
-    
-    tweet = tweets_cleaner(request.form['sentence'])
-    
-    vectorized_tweet = cv.transform([tweet])
-    prediction = model.predict_proba(vectorized_tweet)
-    prediction = ['Positive Sentiment' if proba[1] >= 0.5 else 'Negative Sentiment' for proba in prediction]
+    # Get user input
+    user_input = st.text_area("Enter your tweet:")
 
-    # Join the list of sentiments into a single string
-    prediction = ', '.join(prediction)
-    
-    return render_template('tweet_sentiment.html', prediction_text = f'Your tweet has a {prediction}')
+    if st.button("Predict"):
+        # Preprocess the tweet
+        processed_tweet = tweets_cleaner(user_input)
 
+        # Vectorize and predict
+        vectorized_tweet = cv.transform([processed_tweet])
+        prediction = model.predict_proba(vectorized_tweet)
+        prediction_label = 'Positive Sentiment' if prediction[0, 1] >= 0.5 else 'Negative Sentiment'
+
+        # Display result
+        st.write(f'Your tweet has a {prediction_label}.')
 
 if __name__ == '__main__':
-    # socketio.run(app)
-    app.run(host='127.0.0.1', debug=True)
+    main()
  
