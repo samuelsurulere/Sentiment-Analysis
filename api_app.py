@@ -8,6 +8,16 @@ import nltk
 nltk.download('wordnet')
 nltk.download('stopwords')
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Loading vectorizer and pretrained ML model 
 cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
