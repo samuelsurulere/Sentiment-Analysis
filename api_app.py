@@ -11,8 +11,9 @@ nltk.download('stopwords')
 st.markdown(
     """
     <style>
-    .reportview-container {
-        background: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg")
+    body {
+        background-image: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg");
+        background-size: cover;
     }
     </style>
     """,
