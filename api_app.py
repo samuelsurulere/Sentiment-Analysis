@@ -5,8 +5,10 @@ import string
 import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
-import socketio
-# from werkzeug.utils import secure_filename, redirect
+from flask_socketio import SocketIO
+
+# Create a Socket.IO instance
+socketio = SocketIO(app)
 
 # Create a Flask application
 app = Flask(__name__, template_folder='templates')
@@ -72,11 +74,6 @@ def predict():
     """
     For rendering results on HTML GUI
     """
-    # Extract the value of the 'sentence' form field
-    # to_predict_list = request.form.to_dict()
-    # review_text = pre_processing(to_predict_list['review_text'])
-    
-    # pred = clf.predict(count_vect.transform([review_text]))
     
     tweet = tweets_cleaner(request.form['sentence'])
     
@@ -91,6 +88,6 @@ def predict():
 
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, host='0.0.0.0')
     #app.run(host='0.0.0.0', debug=True)
  
