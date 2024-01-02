@@ -6,6 +6,8 @@ from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import nltk
 
+nltk.download('wordnet')
+
 # Set Streamlit theme to white background and black text
 st.set_page_config(
     page_title="Tweet Sentiment Analysis",
