@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 import nltk
 
 nltk.download('wordnet')
+nltk.download('stopwords')
 
 # Set Streamlit theme to white background and black text
 st.set_page_config(
