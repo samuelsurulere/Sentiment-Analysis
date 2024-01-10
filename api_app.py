@@ -13,7 +13,7 @@ nltk.download('stopwords')
 st.set_page_config(
     page_title="Tweet Sentiment Analysis",
     page_icon=":pencil:",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="expanded",
 )
 
