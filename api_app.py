@@ -82,7 +82,7 @@ def main():
     st.title('Tweet Sentiment Analysis')
 
     # Get user input
-    user_input = st.text_area("Enter your tweet:")
+    user_input = st.text_area("This model can predict the sentiment of your tweet. It will classify the tweet as either positive or negative. Please enter your tweet:")
 
     if st.button("Predict"):
         # Preprocess the tweet
