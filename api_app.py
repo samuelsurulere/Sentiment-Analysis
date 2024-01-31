@@ -5,6 +5,7 @@ import re
 from nltk import WordNetLemmatizer
 from nltk.corpus import stopwords
 import nltk
+from sklearn.metrics._scorer import _PredictScorer
 
 nltk.download('wordnet')
 nltk.download('stopwords')
