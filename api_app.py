@@ -32,8 +32,14 @@ st.markdown(
 
 
 # Loading vectorizer and pretrained ML model 
-cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
-model = pickle.load(open('outputs/final_model.sav', 'rb'))
+# cv = pickle.load(open('outputs/vectorizer.sav', 'rb'))
+# model = pickle.load(open('outputs/final_model.sav', 'rb'))
+
+with open('outputs/vectorizer.sav', 'rb') as f1:
+    cv = pickle.load(f1)
+    
+with open('outputs/final_model.sav', 'rb') as f2:
+    model = pickle.load(f2)
 
 ###################################################################
 # Preprocessing tweets to remove any special characters or numbers
